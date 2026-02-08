@@ -28,20 +28,21 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Sidebar navigation
-with st.sidebar:
-    st.title("🚀 Dashboard Navigation")
-    st.divider()
-
-    # Display current page info
-    st.info("Select a page from the sidebar to explore different features.")
-
-    # Add some useful widgets in sidebar
-    st.subheader("Quick Settings")
-    theme = st.selectbox("Theme", ["dark", "light"])
-    st.divider()
-
-    st.subheader("About")
-    st.markdown("This is a multipage Streamlit dashboard template.")
+# st.sidebar.markdown("# 🏠 Home")
+# with st.sidebar:
+#     st.title("🚀 Dashboard Navigation")
+#     st.divider()
+#
+#     # Display current page info
+#     st.info("Select a page from the sidebar to explore different features.")
+#
+#     # Add some useful widgets in sidebar
+#     st.subheader("Quick Settings")
+#     theme = st.selectbox("Theme", ["dark", "light"])
+#     st.divider()
+#
+#     st.subheader("About")
+#     st.markdown("This is a multipage Streamlit dashboard template.")
 
 # Main content
 st.markdown('<div class="main-header">📊 Multi Page Dashboard</div>', unsafe_allow_html=True)
@@ -92,14 +93,14 @@ with col1:
         st.markdown("#### 📊 Dashboard")
         st.markdown("View key metrics and visualizations")
         if st.button("Go to Dashboard", key="btn1"):
-            st.switch_page("pages/1_📊_Dashboard.py")
+            st.switch_page("Dashboard.py")
 
 with col2:
     with st.container(border=True):
         st.markdown("#### 📈 Analytics")
         st.markdown("Detailed analysis and insights")
         if st.button("Go to Analytics", key="btn2"):
-            st.switch_page("pages/2_📈_Analytics.py")
+            st.switch_page("Analytics.py")
 
 with col3:
     with st.container(border=True):
